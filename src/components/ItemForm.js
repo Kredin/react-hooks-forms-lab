@@ -1,9 +1,15 @@
 import React from "react";
 import { v4 as uuid } from "uuid";
 
-function ItemForm(props) {
+function ItemForm({ onItemFormSumbit }) {
   return (
-    <form className="NewItem">
+    <form
+      className="NewItem"
+      onSubmit={onItemFormSumbit}
+      // onSubmit={(e) => {
+      //   e.preventDefault();
+      // }}
+    >
       <label>
         Name:
         <input type="text" name="name" />
